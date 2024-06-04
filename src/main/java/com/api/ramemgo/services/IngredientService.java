@@ -1,17 +1,20 @@
 package com.api.ramemgo.services;
 
-import com.api.ramemgo.dtos.IngredientDto;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import com.api.ramemgo.dtos.Ingredient;
+import com.api.ramemgo.enums.Broths;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class IngredientService {
 
-    public List<IngredientDto> getBroths() {
-        return null;
+    public List<Ingredient> getBroths() {
+        return Arrays.stream(Broths.values())
+                .map(broth -> new Ingredient(broth.getId(), broth.getImageInactive(), broth.getImageActive(), broth.getName(), broth.getDescription(), broth.getPrice()))
+                .collect(Collectors.toList());
     }
 
 }

@@ -1,6 +1,6 @@
 package com.api.ramemgo.controllers;
 
-import com.api.ramemgo.dtos.IngredientDto;
+import com.api.ramemgo.dtos.Ingredient;
 import com.api.ramemgo.services.IngredientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,8 +19,8 @@ public class IngredientController {
     private final IngredientService ingredientService;
 
     @GetMapping("/broth")
-    public ResponseEntity<List<IngredientDto>> getBrothsList(){
-        return new ResponseEntity<List<IngredientDto>>(ingredientService.getBroths(), HttpStatus.OK);
+    public ResponseEntity<List<Ingredient>> getBrothsList(){
+        return new ResponseEntity<List<Ingredient>>(ingredientService.getBroths(), HttpStatus.OK);
     }
 
 }

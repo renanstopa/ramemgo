@@ -1,9 +1,13 @@
 package com.api.ramemgo.dtos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class IngredientDto {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Ingredient {
 
     private String id;
     private String imageInactive;
