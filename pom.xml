@@ -11,6 +11,7 @@
 	<groupId>com.api</groupId>
 	<artifactId>ramemgo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>ramemgo</name>
 	<description>Ramem Go - API</description>
 	<properties>
