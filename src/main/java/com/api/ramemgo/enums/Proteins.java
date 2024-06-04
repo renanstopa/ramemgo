@@ -1,5 +1,6 @@
 package com.api.ramemgo.enums;
 
+import com.api.ramemgo.exceptions.InvalidOrder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -18,5 +19,14 @@ public enum Proteins {
     private final String name;
     private final String description;
     private final double price;
+
+    public static Proteins getById(String id){
+        for (Proteins p : values()){
+            if(p.getId().equals(id))
+                return p;
+        }
+
+        throw new InvalidOrder("invalid proteinId");
+    }
 
 }

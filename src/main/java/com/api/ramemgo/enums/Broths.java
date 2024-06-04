@@ -1,8 +1,8 @@
 package com.api.ramemgo.enums;
 
+import com.api.ramemgo.exceptions.InvalidOrder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
@@ -19,5 +19,14 @@ public enum Broths {
     private final String name;
     private final String description;
     private final double price;
+
+    public static Broths getById(String id){
+        for (Broths b : values()){
+            if(b.getId().equals(id))
+                return b;
+        }
+
+        throw new InvalidOrder("invalid brothId");
+    }
 
 }
