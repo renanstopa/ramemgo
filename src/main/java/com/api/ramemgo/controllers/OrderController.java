@@ -31,7 +31,7 @@ public class OrderController {
         return new ResponseEntity<List<Ingredient>>(ingredientService.getProteins(), HttpStatus.OK);
     }
 
-    @PostMapping("/orders")
+    @PostMapping("/order")
     public ResponseEntity<OrderResponse> createOrder(@RequestBody OrderRequest orderRequest){
         if(!orderRequest.isOrderValid())
             throw new InvalidOrder("both brothId and proteinId are required");
