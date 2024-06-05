@@ -20,12 +20,4 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(apiKeyInterceptor).addPathPatterns("/**");
     }
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:8080", "https://ramengo-renanstopa.azurewebsites.net", "https://tech.redventures.com.br") // Substitua pelo domínio do seu site externo
-                .allowedMethods("*")
-                .allowedHeaders("*")
-                .allowCredentials(true);
-    }
 }

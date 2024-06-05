@@ -3,3 +3,5 @@ server:
 spring:
     application:
         name: ramemgo
+    mvc:
+        dispatch-options-request=true:
