@@ -14,6 +14,6 @@ public class OrderResponse {
     public OrderResponse(String orderId, Broths broth, Proteins protein) {
         this.id = orderId;
         this.description = broth.getName() + " and " + protein.getName() + " Ramen";
-        this.image = "https://tech.redventures.com.br/icons/ramen.png";
+        this.image = "https://tech.redventures.com.br/icons/ramen/ramenChasu.png";
     }
 }
