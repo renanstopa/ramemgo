@@ -11,7 +11,6 @@
 	<groupId>com.api</groupId>
 	<artifactId>ramemgo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<name>ramemgo</name>
 	<description>Ramem Go - API</description>
 	<properties>
@@ -31,11 +30,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-war-plugin</artifactId>
-			<version>3.4.0</version>
 		</dependency>
 	</dependencies>
 
